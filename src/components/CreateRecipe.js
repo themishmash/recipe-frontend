@@ -90,7 +90,7 @@ class CreateRecipe extends React.Component {
     
     console.log(this.state);
 
-    axios.post(process.env.REACT_APP_BACKEND_URL + "recipes/add", this.state)
+    axios.post(process.env.REACT_APP_BACKEND_URL + "/recipes/add", this.state)
       .then(res => {
         this.props.history.push('/'); //goes back to home
         //window.location.reload(false); //page can reload after recipe item added
