@@ -1,5 +1,11 @@
+.abovecontainer {
+  width: 30%;
+  margin: auto;
+
+}
+
 .createpeepcontainer {
-  padding: 16px; 
+  /* padding: 16px;  */
   display: block;
  
 
@@ -8,7 +14,8 @@
 
 
 .peepformborder {
- 
+  border: 1px solid black;
+  padding: 10px;
   text-align: center;
   /* box-sizing: border-box;
   border: 1px solid black; */

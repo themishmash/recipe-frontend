@@ -19,7 +19,7 @@
   
 }
 
-.recipecontainer {
+.editrecipecontainer {
   /* display: flex; */
   /* align-content: center; */
   border: 1px solid black;
@@ -29,7 +29,7 @@
 }
 
 
-.h3createrecipe {
+.h3editrecipe {
   text-align: center;
 }
 

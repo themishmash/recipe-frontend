@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import axios from 'axios';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import styles from './EditRecipe.module.css';
 
 class EditRecipe extends React.Component {
   constructor(props) {
@@ -108,8 +109,10 @@ class EditRecipe extends React.Component {
   render () {
     return (<div>
        <div><Navbar /></div>
-        <h3>Edit Recipe</h3>
-        <div className="container">
+        <h3 className={styles.h3editrecipe}>Edit Recipe</h3>
+        <div className={styles.abovecontainer}>
+        <div className={styles.container}>
+        <div className={styles.editrecipecontainer}>
           <form action="/action_page.php">
             <div className="row">
               <div className="col-25">
@@ -178,6 +181,8 @@ class EditRecipe extends React.Component {
             </div>
 
           </form>
+        </div>
+        </div>
         </div>
     </div>)
   }

@@ -55,6 +55,7 @@ class CreatePeep extends React.Component {
     return (<div>
       <div><Navbar /></div>
       <h3 className={styles.createpeeph3}>Create New Peep</h3>
+      <div className={styles.abovecontainer}>
       <div className={styles.createpeepcontainer}>
         <div className={styles.peepformborder}>
         <form action="/action_page.php">
@@ -78,6 +79,7 @@ class CreatePeep extends React.Component {
             <button onClick={this.onSubmit} className="submit">Add Peep</button>
           </div>
         </form>
+      </div>
       </div>
       </div>
     </div>)
