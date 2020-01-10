@@ -31,7 +31,7 @@ class CreateRecipe extends React.Component {
     //   peepname: 'test peep'
     // }); 
     //the above is COMMENTED OUT as now want to get the current users that have been added and have as drop down box
-    axios.get('http://localhost:5000/peeps')
+    axios.get(process.env.REACT_APP_BACKEND_URL + "/peeps")
       .then(response => {
         if (response.data.length > 0) {//checking there is at least one user 
           this.setState({
@@ -90,7 +90,7 @@ class CreateRecipe extends React.Component {
     
     console.log(this.state);
 
-    axios.post('http://localhost:5000/recipes/add', this.state)
+    axios.post(process.env.REACT_APP_BACKEND_URL + "/add", this.state)
       .then(res => {
         this.props.history.push('/'); //goes back to home
         //window.location.reload(false); //page can reload after recipe item added
