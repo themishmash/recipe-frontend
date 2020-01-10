@@ -50,7 +50,7 @@ class RecipesList extends React.Component {
   }
 
   deleteRecipe = (id) => {
-    axios.delete(process.env.REACT_APP_BACKEND_URL + id)
+    axios.delete(process.env.REACT_APP_BACKEND_URL + "/recipes/" + id)
       .then(response => { console.log(response.data)});
       
     this.setState({
