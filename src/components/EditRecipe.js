@@ -21,7 +21,7 @@ class EditRecipe extends React.Component {
   componentDidMount() {
     //need another axios for username to link to recipe we edit
     // axios.get('http://localhost:5000/recipes/' +this.props.match.params.id)
-    axios.get(process.env.REACT_APP_BACKEND_URL + "/recipes"+this.props.match.params.id)
+    axios.get(process.env.REACT_APP_BACKEND_URL + "/recipes/"+this.props.match.params.id)
       .then(response => {
         this.setState({
           peepname: response.data.peepname,
@@ -94,10 +94,12 @@ class EditRecipe extends React.Component {
     console.log(this.state);
 
     // axios.put('http://localhost:5000/recipes/update/' + this.props.match.params.id, this.state)
-    axios.put(process.env.REACT_APP_BACKEND_URL + "/recipes/update" + this.props.match.params.id, this.state)
-      .then(res => console.log(res.data));
-  
-    window.location = '/' //taking person back to home page - the list of exercises
+    axios.put(process.env.REACT_APP_BACKEND_URL + "/recipes/update/" + this.props.match.params.id, this.state)
+      .then(res => {
+        this.props.history.push('/');
+      });
+    
+     //taking person back to home page - the list of exercises
     //console.log("hello")
 
   }
