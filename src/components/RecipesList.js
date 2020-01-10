@@ -38,7 +38,7 @@ class RecipesList extends React.Component {
     //   peepname: 'test peep'
     // }); 
     //the above is COMMENTED OUT as now want to get the current users that have been added and have as drop down box
-    console.log('herrerereeee')
+    console.log('test')
     // axios.get('http://localhost:5000/recipes/')
     axios.get(process.env.REACT_APP_BACKEND_URL + "/recipes")
       .then(response => {
@@ -50,7 +50,7 @@ class RecipesList extends React.Component {
   }
 
   deleteRecipe = (id) => {
-    axios.delete('http://localhost:5000/recipes/'+id)
+    axios.delete(process.env.REACT_APP_BACKEND_URL+id)
       .then(response => { console.log(response.data)});
       
     this.setState({
