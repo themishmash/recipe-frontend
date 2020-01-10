@@ -40,7 +40,8 @@ class CreatePeep extends React.Component {
 
     //now send user data to backend
     //post reqest to send http request to local host. expect json body 
-    axios.post('http://localhost:5000/peeps/add', this.state)
+    // axios.post('http://localhost:5000/peeps/add', this.state)
+    axios.post(process.env.REACT_APP_BACKEND_URL + "/peeps/add", this.state)
       .then(res=>console.log(res.data));
     
     this.setState({
